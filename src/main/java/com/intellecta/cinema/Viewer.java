@@ -1,14 +1,19 @@
 package com.intellecta.cinema;
 
+import java.util.ArrayList;
+
 public class Viewer {
     private String name;
     private int age;
     private int count;
+    private ArrayList<Cinema> films;
 
-    public Viewer(String name, int age, int count){
+    public Viewer(String name, int age, ArrayList<Cinema> films){
         this.name = name;
         this.age = age;
-        this.count = count;
+        this.count = films.size();
+        this.films = films;
+
     }
     public String getName() {
         return name;
@@ -30,7 +35,12 @@ public class Viewer {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public ArrayList<Cinema> getFilms() {
+        return films;
+    }
+
+    public void setFilms(ArrayList<Cinema> films) {
+        this.films = films;
+        count = films.size();
     }
 }

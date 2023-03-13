@@ -13,11 +13,14 @@ public class CinemaApplicationRun {
 
         SpringApplication.run(CinemaApplicationRun.class, args);
         List<Viewer> viewerList = new ArrayList<>();
-        Viewer viewer1 = new Viewer("TestViewer1", 15, 2);
-        Viewer viewer2 = new Viewer("TestViewer2", 23, 10);
-        Viewer viewer3 = new Viewer("TestViewer3", 44, 123);
-        Viewer viewer4 = new Viewer("TestViewer4", 12, 1);
-        Viewer viewer5 = new Viewer("TestViewer5", 67, 23422);
+        Cinema film = new Cinema("Inception", "triller", 1.6f);
+        ArrayList<Cinema> filmList = new ArrayList<>();
+        filmList.add(film);
+        Viewer viewer1 = new Viewer("TestViewer1", 15, filmList);
+        Viewer viewer2 = new Viewer("TestViewer2", 23, filmList);
+        Viewer viewer3 = new Viewer("TestViewer3", 44, filmList);
+        Viewer viewer4 = new Viewer("TestViewer4", 12, filmList);
+        Viewer viewer5 = new Viewer("TestViewer5", 67, filmList);
         viewerList.add(viewer1);
         viewerList.add(viewer2);
         viewerList.add(viewer3);
